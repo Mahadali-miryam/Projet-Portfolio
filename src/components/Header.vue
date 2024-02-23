@@ -8,7 +8,7 @@ const state = ref(false);
 const links = ref([
   {name:'Accueil',path:'/'},
   {name:'Présentation',path:'presentation'},
-  {name: 'Réalisations',path: 'Myworks'},
+  {name: 'Réalisations',path: 'MyWorks'},
   {name:'Contact',path: 'contact'}
 ]);
 
