@@ -7,9 +7,9 @@ const state = ref(false);
 /*liste des liens. Ajouter ou modifiez des objets dans ce tableau pour mettre à jour le menu*/
 const links = ref([
   {name:'Accueil',path:'/'},
-  {name:'Présentation',path:'presentation'},
-  {name: 'Réalisations',path: 'MyWorks'},
-  {name:'Contact',path: 'contact'}
+  {name:'Présentation',path: 'presentation'},
+  {name:'Réalisations',path: 'myWorks'},
+  {name:'Contact',path: 'contact'},
 ]);
 
 </script>
@@ -100,19 +100,7 @@ li:hover{
 .links{
   display:none;
 }
-/* Pour les liens non visités sur mobile */
-.menu-burger .router-link-active,
-.menu-burger .router-link-exact-active,
-.menu-burger router-link {
-  color:#1C1B55; /* Couleur bleu profond pour les liens non visités */
-}
 
-/* Pour les liens visités sur mobile */
-.menu-burger .router-link-active:visited,
-.menu-burger .router-link-exact-active:visited,
-.menu-burger router-link:visited {
-  color: #FFD700; /* Couleur or pour les liens visités */
-}
 /* Masquage des liens sur mobile et affichage en flex sur desktop */
 @media screen and (min-width: 780px){
 .burger{
@@ -151,15 +139,6 @@ li:hover{
 .logo:hover {
   opacity: 0.5;
 }
-/* Pour les liens non visités */
-.router-link-active, .router-link-exact-active, router-link {
-  color: #F2F2F2 ; /* Couleur blanche pour les liens non visités */
-}
 
-/* Pour les liens visités */
-.router-link-active:visited, .router-link-exact-active:visited, router-link:visited {
-  color:#FFD700 ; /* Couleur or pour les liens visités */
 }
-}
-
 </style>
