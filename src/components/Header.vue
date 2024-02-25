@@ -8,7 +8,7 @@ const state = ref(false);
 const links = ref([
   {name:'Accueil',path:'/'},
   {name:'Présentation',path: 'presentation'},
-  {name:'Réalisations',path: 'myWorks'},
+  {name:'Réalisations',path: '/réalisations'},
   {name:'Contact',path: 'contact'},
 ]);
 
@@ -111,10 +111,8 @@ li:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  
+  width: 60%; 
 }
-
 .links li{
   list-style: none; 
   padding: 10px;
