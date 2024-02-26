@@ -31,6 +31,7 @@ main {
   min-height: 70vh;
   background-color: #F2F2F2; 
   margin-bottom: 100px; 
+  
 }
 
 .introduction {

@@ -1,5 +1,14 @@
 <script setup>
-// Fonction pour émettre l'événement closeModal
+/*Permet au composant d'émettre l'événement 'closeModal'*/
+const emit = defineEmits(['closeModal']);
+
+/*Déclare les props reçues du composant parent*/
+const props = defineProps({
+  creation: Object,
+  modalOpen: Boolean /*Contrôle l'affichage de la modale*/
+});
+
+/*Appelé quand on veut fermer la modale*/
 function closeModal() {
   emit('closeModal');
 }
@@ -8,18 +17,22 @@ function closeModal() {
 <template>
 <!-- La modale ne s'affiche que si modalOpen est true -->
   <div v-if="modalOpen" class="modal" @click.self="closeModal">
-    <div class="modal-content">
+  <div class="modal-content">
   <!-- Bouton pour fermer la modale -->
     <button @click="closeModal" class="close-button">&times;</button>
-  <!-- Contenu de la modale -->
-    <h2>{{ creation.title }}</h2>
-      <img :src="creation.image" :alt="creation.title" class="modal-image" />
-      <p>{{ creation.description }}</p>
-      <p>Informations supplémentaires :</p>
-        <ul>
-          <li>Date de création:sept 2023 {{ creation.date }}</li>
-          <li>Technologies utilisées :html,css {{ creation.technologies }}</li>   
-        </ul>
+  <h2>{{props.creation.title }}</h2>
+  
+  <div class="images-container"> 
+    <img :src="props.creation.modalImage" :alt="props.creation.title" class="modal-image" />
+    <img :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
+  </div> 
+    <!-- Contenu de la modale -->
+      <p>{{ props.creation.description }}</p>
+
+      <ul class="infos">
+        <li>Date de création: novembre 2023 {{ props.creation.date }}</li>
+        <li>Technologies utilisées : html,css {{ props.creation.technologies }}</li>   
+      </ul>
 
     </div>
   </div>
@@ -34,21 +47,30 @@ function closeModal() {
   transform: translate(-50%, -50%);
   justify-content: center;
   background-color: rgba(210, 210, 210, 0.5); 
-  width: 60%; 
-  height: 60%; 
+  width: 90%; 
+  height: 70%; 
 }
 .modal-content {
   background-color: #fff; 
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
+  max-width: 800px;
   position: relative;
+  padding: 10px;
+  text-align: center; 
 }
+.modal-content p {
+  text-align: left;
+}
+.images-container {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px 30px;
+}
+
 .modal-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+  max-width: 50%; 
+  max-height: auto;
+  display: block;  
 }
 .close-button {
   position: absolute;
@@ -62,4 +84,19 @@ function closeModal() {
   border-radius: 5px;
   font-weight: bold;
 }
+li::before {
+  content: '•'; 
+  color: #FFD700; 
+  font-weight: bold;
+  margin-right: 8px;
+  position: relative;
+  
+}
+li {
+    list-style-type: none;
+    margin: 10px 30px;
+    padding: 10px;
+    font-size: 19px;
+}
+
 </style>
