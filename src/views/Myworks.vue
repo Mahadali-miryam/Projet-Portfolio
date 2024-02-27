@@ -6,13 +6,56 @@ import cahierdescharges from '@/assets/cahierdescharges.jpg';
 import formulaire from '@/assets/formulaire.jpg';
 import maquette from '@/assets/maquette.jpg';
 import Header from '@/components/Header.vue';
-
-
+import maquetteintegration from '@/assets/maquetteintegration.jpg';
 const creations = ref([
-  { title: "Curriculum Vitae", image: imageCV,  modalImage: maquette ,modalImage2: formulaire, description: "Curriculum Vitae Miryam Mahadali." },
-  {title: "Cahier des charges", image: cahierdescharges, description: "Cahier des charges"},
-  {title: "Formulaire", image: formulaire, description: "Dynamiser un espace formulaire"},
-  { title: "Maquette MY HOMESPACE", image: maquette, description: "Maquette d'integration MY-HOMESPACE" },
+  {
+    title: "Curriculum Vitae",
+    image: imageCV,
+    modalImage: maquette,
+    modalImage2: formulaire,
+    description: "Curriculum Vitae Miryam Mahadali.",
+    details: [
+      { label: "Date de création", value: "novembre 2023" },
+      { label: "Technologies utilisées", value: "HTML5, CSS3" },
+    ],
+    github: "https://github.com/Mahadali-miryam/CV-1" 
+  },
+{
+    title: "Cahier des charges",
+    image: cahierdescharges,
+    modalImage:cahierdescharges ,
+    description: "Cahier des charges",
+    details: [
+      { label: "Date de création", value: "Décembre 2023" },
+      { label: "Technologies utilisées", value: "word" },
+    ],
+    
+  },
+  
+  {
+    title: "Formulaire",
+    image: formulaire,
+    modalImage:formulaire,
+   
+    description: "Dynamiser un espace formulaire",
+    details: [ 
+      { label: "Date de création", value: "Janvier 2024" },
+      { label: "Technologies utilisées", value: "HTML5, CSS et Java-Script" },
+    ],
+    github: "https://github.com/Mahadali-miryam/devoir-dynamiser-un-espace-commentaire" 
+  },
+
+  {
+    title: "Maquette MY HOMESPACE",
+    image: maquette,
+    modalImage:maquetteintegration,
+    description: "Cette maquette est un exercice qui m'a permis d'evoluer avec html5 et css",
+    details: [
+    { label: "Date de création", value: "Janvier 2024" },
+      { label: "Technologies utilisées", value: "HTML5, CSS" },
+    ],
+    github: "https://github.com/Mahadali-miryam/exercice-My-Home-Space" 
+  },
 ]);
 const modalOpen = ref(false);
    const selectedCreation = ref({});

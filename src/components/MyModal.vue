@@ -27,12 +27,12 @@ function closeModal() {
     <img :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
   </div> 
     <!-- Contenu de la modale -->
-      <p>{{ props.creation.description }}</p>
-
-      <ul class="infos">
-        <li>Date de création: novembre 2023 {{ props.creation.date }}</li>
-        <li>Technologies utilisées : html,css {{ props.creation.technologies }}</li>   
-      </ul>
+  <p>{{ props.creation.description }}</p>
+  <ul class="infos">
+        <li v-for="detail in props.creation.details" :key="detail.label">
+          {{ detail.label }}: {{ detail.value }}
+        </li>
+      </ul>    
 
     </div>
   </div>
