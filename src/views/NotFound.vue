@@ -1,6 +1,7 @@
 <template>
     <div class="not-found-container">
       <img src="@/assets/404-image.jpg" alt="Page not found" class="not-found-image" />
+      <p>La page que vous recherchez n'existe pas.</p>
     </div>
   </template>
   
