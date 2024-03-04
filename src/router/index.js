@@ -3,7 +3,7 @@ import Home from '../views/Home.vue';
 import MyWorks from '../views/MyWorks.vue';
 import About from '../views/About.vue'; 
 import Contact from '../views/Contact.vue';
-import NotFound from '@/views/NotFound.vue';
+import NotFound from '../views/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory( ),
@@ -18,9 +18,7 @@ const router = createRouter({
     {
       path: '/presentation',
       name: 'About',
-       
-      component: () => import('../views/About.vue')
-    
+      component: About,
     },
     {
       path: '/réalisations',
@@ -38,6 +36,7 @@ const router = createRouter({
       component: NotFound
     } 
   ],
+ 
 });
 
 export default router;

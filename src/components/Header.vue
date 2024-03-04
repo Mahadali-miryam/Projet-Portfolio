@@ -55,7 +55,7 @@ const closeMenu = () => {
     <router-link :to="link.path">{{ link.name }}</router-link></li>
     
     </ul>
-  
+   
   </header>
 </template>
 
@@ -71,6 +71,8 @@ header{
   width: 100%;
   height: auto;
   position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 /* Style des barres du menu burger */
@@ -87,12 +89,17 @@ header{
   width: 100%;
   top: 0px;
   left: 100%;
-  background-color:#F2F2F2 ;
+  background-color:#f2f2f2f2 ;
   transition: 0.3s;/*Animation pour l'apparition du menu*/ 
- 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+   
 }
 .burger-active{
-  z-index: 2; 
+  z-index: 2;
+  position: fixed;  
+  right: 20px; 
 }
 /*Apparence du menu burger lorsqu'il est actif*/
 .active{
@@ -102,8 +109,7 @@ header{
 
 /*Effet au survol pour les liens */
 li:hover{
-  background-color:#FF6B6B;
-  color: #FFD700;
+  background-color:#FFD700;
 }
 .links{
   display:none;
@@ -121,21 +127,15 @@ li:hover{
   align-items: center;
   width: 60%; 
 }
-.links li{
-  list-style: none; 
-  padding: 10px;
-  margin-right: 100px; 
-  color: #F2F2F2;
-  font-weight: 400;
-  font-size: 700;
-}
+
 /*Effet de survol sur les liens */
-.links li:hover {
+.links li:active {
   background-color:  #FFD700;
-  color: #FFD700;
+  color:#FF6B6B;
   cursor: pointer;  
   transform: scale(1.05); /*indique un élément cliquable */
   transition: transform 0.3s,background-color 0.3s; /* Anime les changements */
+  border-radius: 10px;
 }
 .logo{
   cursor: pointer;
