@@ -42,12 +42,12 @@ function closeModal() {
 .modal {
   display: flex;
   position: fixed;
-  top: 50%;
+  top: 510px;
   left: 50%;
   transform: translate(-50%, -50%);
   justify-content: center;
   background-color: rgba(210, 210, 210, 0.5); 
-  width: 90%; 
+  width: 80%; 
   height: 70%; 
 }
 .modal-content {

@@ -131,7 +131,7 @@ const modalOpen = ref(false);
 @media (max-width: 768px) {
   .creations-container {
     padding-bottom: 30%; 
-  padding-top: 15%;
+    padding-top: 15%;
   }
 
   .creation {
@@ -141,7 +141,7 @@ const modalOpen = ref(false);
 
   .creation-image {
     width: 80%;  
-    margin-bottom: 10px; /* Réduit l'espacement en dessous de l'image */
+    margin-bottom: 10px; 
     margin-left: auto; 
     margin-right: auto
   }

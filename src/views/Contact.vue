@@ -128,8 +128,14 @@ button {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
-
+.contact-form button {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: auto; 
+  }
 button:hover {
   background-color: #FF6B6B; 
   color: #FFD700; 
