@@ -1,8 +1,13 @@
 <script setup>
 import {ref} from 'vue';
-/*Pour gérer l'affichage du menu burger sur les mobiles*/
 
+/*Pour gérer l'affichage du menu burger sur les mobiles*/
 const state = ref(false);
+
+/*Fonction pour fermer le menu burger*/
+const toggleMenu = () => {
+  state.value = !state.value;
+};
 
 /*liste des liens. Ajouter ou modifiez des objets dans ce tableau pour mettre à jour le menu*/
 const links = ref([
@@ -11,7 +16,10 @@ const links = ref([
   {name:'Réalisations',path: '/réalisations'},
   {name:'Contact',path: 'contact'},
 ]);
-
+/*Fonction pour fermer le menu lorsque vous cliquez sur un lien*/
+const closeMenu = () => {
+  state.value = false;
+};
 </script>
 
 <template>
@@ -35,7 +43,7 @@ const links = ref([
     
     <ul>
     <!--Boucle sur les liens de navigation pour afficher le menu-->
-    <li v-for="(link, index) in links" :key="index">
+    <li v-for="(link, index) in links" :key="index" @click="closeMenu">
     <router-link :to="link.path">{{ link.name }}</router-link>
     </li>
     </ul> 
@@ -94,7 +102,7 @@ header{
 
 /*Effet au survol pour les liens */
 li:hover{
-  background-color:#FF6B6B; 
+  background-color:#FF6B6B;
   color: #FFD700;
 }
 .links{
@@ -123,7 +131,7 @@ li:hover{
 }
 /*Effet de survol sur les liens */
 .links li:hover {
-  background-color: #FF6B6B; 
+  background-color:  #FFD700;
   color: #FFD700;
   cursor: pointer;  
   transform: scale(1.05); /*indique un élément cliquable */

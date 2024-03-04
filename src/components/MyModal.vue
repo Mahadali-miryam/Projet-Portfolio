@@ -24,7 +24,7 @@ function closeModal() {
   
   <div class="images-container"> 
     <img :src="props.creation.modalImage" :alt="props.creation.title" class="modal-image" />
-    <img :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
+    <img v-if="props.creation.modalImage2" :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
   </div> 
     <!-- Contenu de la modale -->
   <p>{{ props.creation.description }}</p>
@@ -51,7 +51,7 @@ function closeModal() {
   height: 70%; 
 }
 .modal-content {
-  background-color: #fff; 
+  background-color:#FAF9F6; 
   max-width: 800px;
   position: relative;
   padding: 10px;
@@ -64,12 +64,14 @@ function closeModal() {
   display: flex;
   justify-content: center; 
   gap: 20px; 
-  padding: 20px 30px;
+  padding: 30px 50px;
+  margin-bottom:20px ;
+  
 }
 
 .modal-image {
-  max-width: 50%; 
-  max-height: auto;
+  width:300px; 
+  height: auto;
   display: block;  
 }
 .close-button {

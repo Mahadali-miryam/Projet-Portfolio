@@ -8,6 +8,7 @@ import Footer from './components/Footer.vue';
 
 <main id="main"> 
 <RouterView/> 
+
 </main>
 
 <footer>

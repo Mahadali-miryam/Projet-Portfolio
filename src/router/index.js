@@ -7,6 +7,7 @@ import NotFound from '@/views/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory( ),
+
   routes: [
     {
       path: '/',
@@ -28,9 +29,8 @@ const router = createRouter({
     },
     {
       path: '/contact',
-      name: 'contact',
-     
-      component: () => import('../views/Contact.vue')
+      name: 'Contact',
+      component: Contact,
     },
     {
       path: '/:pathMatch(.*)*',
