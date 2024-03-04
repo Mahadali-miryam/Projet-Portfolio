@@ -3,8 +3,7 @@ import Header from '@/components/Header.vue';
 </script>
 
 <template>
-  <Header/>
-
+<Header/>
 <main>
   <section class="introduction">
     <h1>Bonjour et bienvenue sur mon portfolio!</h1>
@@ -12,9 +11,11 @@ import Header from '@/components/Header.vue';
       <p>Plongez dans mon espace numérique où la technologie et la créativité se rencontrent pour donner vie à des projets web uniques.<br>
         Découvrez mes réalisations et mes compétences .</p>
   </section>
+ <MyWorks/>
+ <Contact/>
   
-  </main>
-
+</main>
+  
 </template>
 
 <style scoped>
@@ -28,10 +29,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 80vh;
   background-color: #F2F2F2; 
-  margin-bottom: 100px; 
-  
 }
 
 .introduction {
@@ -57,10 +56,26 @@ p {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  h1, h2 {
-    font-size: smaller;
+  @media (max-width: 768px) {
+  .introduction {
+    padding: 1rem; 
+    margin-top: 10px;
   }
-  
+
+  h1 {
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
+  }
+
+  h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 0.5rem; 
+  }
+
+  p {
+    font-size: 0.9rem; 
+    margin-bottom: 0.5rem; 
+  }
 }
+  
 </style>
