@@ -109,10 +109,19 @@ header{
 
 /*Effet au survol pour les liens */
 li:hover{
-  background-color:#FFD700;
+  background-color:#87CEEB;
+  cursor: pointer;  
+  transform: scale(1.05); /*indique un élément cliquable */
+  transition: transform 0.3s,background-color 0.3s; /* Anime les changements */
+  border-radius: 10px;
 }
 .links{
   display:none;
+}
+.router-link-exact-active {
+  text-decoration: underline; 
+  color: #FFD700; 
+  font-weight: bold; 
 }
 
 /* Masquage des liens sur mobile et affichage en flex sur desktop */
@@ -127,15 +136,7 @@ li:hover{
   align-items: center;
   width: 60%; 
 }
-
-/*Effet de survol sur les liens */
-.links li:active {
-  background-color:  #FFD700;
-  color:#FF6B6B;
-  cursor: pointer;  
-  transform: scale(1.05); /*indique un élément cliquable */
-  transition: transform 0.3s,background-color 0.3s; /* Anime les changements */
-  border-radius: 10px;
+ 
 }
 .logo{
   cursor: pointer;
@@ -146,5 +147,5 @@ li:hover{
   opacity: 0.5;
 }
 
-}
+
 </style>

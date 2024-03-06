@@ -71,7 +71,7 @@ const modalOpen = ref(false);
 <template>
   <main>
   <div id="realisations" class="creations-container">
-    <h2 class="creations-title">Mes créations</h2> 
+    <h1 class="creations-title">Mes créations</h1> 
   <!-- Boucle à travers les créations et affiche chaque création -->
   <div v-for="(creation, index) in creations" :key="index" class="creation">
     <img :src="creation.image" :alt="creation.title" @click="openModal(creation)" class="creation-image" />
@@ -102,6 +102,7 @@ const modalOpen = ref(false);
 
 .creation:hover {
   transform: translateY(-5px);
+  box-shadow: 10px 10px 15px rgba(255, 215, 0, 0.4);
 }
 
 .creation-image {
@@ -113,16 +114,18 @@ const modalOpen = ref(false);
 
 .creation p {
   text-align: center;
+  color: #333;
 }
 
-.creations-title {
-  font-size: 2rem;
-  color: #303030;
+.creations-title  {
+  color: #333;
   text-transform: uppercase;
-  font-weight: 600;
+  font-size: 2rem;
   text-align: center;
   width: 100%;
   margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 /* Responsive design */

@@ -3,19 +3,19 @@
 </script>
 
 <template>
- 
  <main>
+  <h1 class="titre-presentation">PRESENTATION</h1>
     <p>
       Je m'appelle Miryam Mahadali, fascinée par le monde du développement web.<br>
       Après une carrière enrichissante en tant que technicienne de laboratoire d'analyse médicale,<br> 
-      j'ai décidé de me lancer dans une aventure palpitante : devenir développeuse fullstack.
-      Actuellement en formation chez CEF,<br> je peaufine mes compétences en HTML, CSS, JavaScript,
-      et bien d'autres technologies clés pour vous offrir des solutions web sur mesure.<br>
+      j'ai décidé de me lancer dans une aventure palpitante : devenir<strong> développeuse web</strong>.
+      <br>Je peaufine mes compétences en<strong> HTML, CSS, JavaScript,</strong>
+      et bien <strong>d'autres technologies clés</strong> pour vous offrir des solutions web sur mesure.<br>
       Mon objectif est de créer des expériences utilisateurs captivantes et des sites web performants qui répondent parfaitement aux besoins de mes clients.<br>
       Avec un œil pour le détail et une approche créative, je suis prête à transformer vos idées en réalité digitale.<br>
       Découvrez mon portfolio pour un aperçu de mon univers où chaque pixel est imprégné de créativité.<br> 
       Si vous êtes prêt à donner vie à votre projet web, contactez-moi.<br>
-      Ensemble, nous pouvons Créer, Coder, Conquérir - Votre univers web sans limites.   
+      <span class="bold-text">Ensemble, nous pouvons Créer, Coder, Conquérir - Votre univers web sans limites.</span>   
     </p>
  </main>
 </template>
@@ -33,7 +33,17 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 90px;
-  
+}
+
+.titre-presentation {
+  font-size: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -41,6 +51,15 @@ p {
   color: #333;
   line-height: 1.6;
 }
+.bold-text { 
+  font-weight: bold;
+  font-family: "Poppins", sans-serif; 
+  font-size: 800;
+}
+strong{
+  font-style: italic
+}
+
 @media (max-width: 768px) {
   main {
     margin: 50px auto; 

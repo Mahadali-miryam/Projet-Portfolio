@@ -39,7 +39,7 @@ try {
 
 <main>
   <div class="contact-form">
-    <h2>Contactez-moi</h2> 
+    <h1>Contactez-moi</h1> 
     <p>Vous avez un projet en tête ? Discutons-en ensemble !</p> 
     <form @submit.prevent="sendContactForm">
       <div>
@@ -76,16 +76,19 @@ try {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
-.contact-form h2 {
+.contact-form h1 {
   text-align: center;
-  color: #1C1B55; 
+  color: #333; 
   margin-bottom: 1rem;
- 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .contact-form p {
   text-align: center;
-  color: #666666; 
+  color: #333; 
   margin-bottom: 2rem;
 }
 form div {
@@ -95,7 +98,8 @@ form div {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #1C1B55; 
+  color: #1C1B55;
+   
 }
 
 input[type="text"],
@@ -136,8 +140,8 @@ button {
     width: auto; 
   }
 button:hover {
-  background-color: #FF6B6B; 
-  color: #FFD700; 
+  background-color:#87CEEB; 
+   
 }
 @media (max-width: 768px) {
   .contact-form {
