@@ -48,26 +48,28 @@ main {
   background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 90px; /* Même marge pour toutes les sections */
-  padding: 2rem; /* Uniform padding */
+  margin-bottom: 90px; 
+  padding: 2rem; 
 }
 
 h1, h2 {
-  color: #303030;
+  color: #333;
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 0.5rem;
+  font-style: italic
 }
 
 h2 {
   margin-bottom: 1rem;
-  color:#FFD700; ;
+  color:#FFD700; 
+  
 }
 
 p {
-  color: #696969;
+  color:#333;
   margin-bottom: 1rem;
 }
 

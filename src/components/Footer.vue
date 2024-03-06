@@ -35,7 +35,7 @@ La variable 'lastUpdated' change automatiquement la date ici. -->
 
 <style scoped>
 footer {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
