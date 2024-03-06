@@ -12,8 +12,8 @@ const toggleMenu = () => {
 /*liste des liens. Ajouter ou modifiez des objets dans ce tableau pour mettre à jour le menu*/
 const links = ref([
   {name:'Accueil',path:'/'},
-  {name:'Présentation',path: 'presentation'},
-  {name:'Réalisations',path: '/réalisations'},
+  {name:'Présentation',path: 'présentation'},
+  {name:'Réalisations',path: 'réalisations'},
   {name:'Contact',path: 'contact'},
 ]);
 /*Fonction pour fermer le menu lorsque vous cliquez sur un lien*/
@@ -43,7 +43,7 @@ const closeMenu = () => {
     
     <ul>
     <!--Boucle sur les liens de navigation pour afficher le menu-->
-    <li v-for="(link, index) in links" :key="index" @click="closeMenu">
+    <li v-for="(link, index) in links" :key="index"@click="closeMenu">
     <router-link :to="link.path">{{ link.name }}</router-link>
     </li>
     </ul> 
@@ -51,9 +51,9 @@ const closeMenu = () => {
 
     <!--Menu principal pour les écrans de bureau(menu desktop)-->
     <ul class="links">
-     <li v-for="(link, index) in links" :key="index">
-    <router-link :to="link.path">{{ link.name }}</router-link></li>
-    
+      <li v-for="(link, index) in links" :key="index"> 
+      <router-link :to="link.path">{{ link.name }}</router-link> 
+      </li>  
     </ul>
    
   </header>

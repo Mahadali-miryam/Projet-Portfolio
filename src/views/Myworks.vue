@@ -5,7 +5,6 @@ import imageCV from '@/assets/image-CV.jpg';
 import cahierdescharges from '@/assets/cahierdescharges.jpg';
 import formulaire from '@/assets/formulaire.jpg';
 import maquette from '@/assets/maquette.jpg';
-import Header from '@/components/Header.vue';
 import maquetteintegration from '@/assets/maquetteintegration.jpg';
 const creations = ref([
   {
@@ -70,7 +69,6 @@ const modalOpen = ref(false);
    }
 </script>
 <template>
-    <Header />
   <main>
   <div id="realisations" class="creations-container">
     <h2 class="creations-title">Mes créations</h2> 

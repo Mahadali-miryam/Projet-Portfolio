@@ -1,10 +1,9 @@
 <script setup>
-import Header from '@/components/Header.vue';
 
 </script>
 
 <template>
- <Header/>
+ 
  <main>
     <p>
       Je m'appelle Miryam Mahadali, fascinée par le monde du développement web.<br>
@@ -34,6 +33,7 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 90px;
+  
 }
 
 p {
