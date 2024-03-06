@@ -1,5 +1,4 @@
 <script setup>
-import Header from '@/components/Header.vue';
 import { ref } from 'vue';
 
 const firstName = ref('');
@@ -37,7 +36,7 @@ try {
 </script>
 
 <template>
- <Header/>
+
 <main>
   <div class="contact-form">
     <h2>Contactez-moi</h2> 

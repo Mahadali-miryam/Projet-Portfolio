@@ -1,20 +1,27 @@
 <script setup>
-import Header from '@/components/Header.vue';
-
+import MyWorks from '../views/MyWorks.vue';
+import About from '../views/About.vue'; 
+import Contact from '../views/Contact.vue';
 </script>
-
 <template>
-<Header/>
+
 <main>
-  <section class="introduction">
-    <h1>Bonjour et bienvenue sur mon portfolio!</h1>
-    <h2>JE SUIS MIRYAM MAHADALI<br>DEVELOPPEUSE WEB</h2>
-      <p>Plongez dans mon espace numérique où la technologie et la créativité se rencontrent pour donner vie à des projets web uniques.<br>
+    <section class="introduction">
+      <h1>Bonjour et bienvenue sur mon portfolio!</h1>
+      <h2>JE SUIS MIRYAM MAHADALI<br>DEVELOPPEUSE WEB</h2>
+        <p>Plongez dans mon espace numérique où la technologie et la créativité se rencontrent pour donner vie à des projets web uniques.<br>
         Découvrez mes réalisations et mes compétences .</p>
-  </section>
- <MyWorks/>
- <Contact/>
-  
+    </section>
+   
+    <section class="about-section">
+        <About/>
+    </section>
+    <section class="my-works-section">
+        <MyWorks/>
+    </section>
+    <section  class="contact-section">
+        <Contact/>
+    </section>
 </main>
   
 </template>
@@ -30,53 +37,60 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 80vh;
-  background-color: #F2F2F2; 
+  max-height: 1900vh;
+  margin: 2rem auto;
+  padding: 2rem; 
 }
 
-.introduction {
+.section {
   text-align: center;
-  max-width: 800px;
-  margin-top: 0px;
+  max-width: 900px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 90px; /* Même marge pour toutes les sections */
+  padding: 2rem; /* Uniform padding */
+}
+
+h1, h2 {
+  color: #303030;
 }
 
 h1 {
-  color: #303030; 
   font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  color: #303030; 
   margin-bottom: 1rem;
+  color:#FFD700; ;
 }
 
 p {
-  color: #696969; 
+  color: #696969;
   margin-bottom: 1rem;
 }
 
 /* Responsive design */
-  @media (max-width: 768px) {
-  .introduction {
-    padding: 1rem; 
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
     margin-top: 10px;
   }
 
   h1 {
-    font-size: 1.5rem; 
-    margin-bottom: 0.5rem; 
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   h2 {
-    font-size: 1.2rem; 
-    margin-bottom: 0.5rem; 
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 0.9rem; 
-    margin-bottom: 0.5rem; 
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 }
-  
 </style>

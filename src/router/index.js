@@ -10,19 +10,26 @@ const router = createRouter({
 
   routes: [
     {
+      
       path: '/',
       name: 'home',
-      component: Home,
+      components: {
+        default: Home,
+        about: About,
+        myWorks: MyWorks,
+        contact: Contact
+      }
     },
-  
+    
+
     {
-      path: '/presentation',
-      name: 'About',
+      path: '/présentation',
+      name: 'about',
       component: About,
     },
     {
       path: '/réalisations',
-      name: 'MyWorks',
+      name: 'myworks',
       component: MyWorks,
     },
     {
@@ -33,8 +40,8 @@ const router = createRouter({
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: NotFound
-    } 
+      component: NotFound,
+    },
   ],
  
 });
