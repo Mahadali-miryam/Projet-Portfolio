@@ -16,7 +16,7 @@ function closeModal() {
 
 <template>
 <!-- La modale ne s'affiche que si modalOpen est true -->
-  <div v-if="modalOpen" class="modal" @click.self="closeModal">
+<div v-if="modalOpen" class="modal" @click.self="closeModal">
   <div class="modal-content">
   <!-- Bouton pour fermer la modale -->
     <button @click="closeModal" class="close-button">&times;</button>
@@ -27,15 +27,14 @@ function closeModal() {
     <img v-if="props.creation.modalImage2" :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
   </div> 
     <!-- Contenu de la modale -->
-  <p>{{ props.creation.description }}</p>
   <ul class="infos">
-        <li v-for="detail in props.creation.details" :key="detail.label">
-          {{ detail.label }}: {{ detail.value }}
-        </li>
-      </ul>    
-
-    </div>
+    <li v-for="detail in props.creation.details" :key="detail.label">
+      {{ detail.label }}: {{ detail.value }}
+    </li>
+  </ul>    
+  <a v-if="props.creation.github" :href="props.creation.github" target="_blank" class="github-link">Voir sur GitHub</a>
   </div>
+</div>
 </template>
 
 <style scoped>
@@ -51,7 +50,7 @@ function closeModal() {
   height: 70%; 
 }
 .modal-content {
-  background-color:#FAF9F6; 
+  background-color:#faf9f6;  
   max-width: 800px;
   position: relative;
   padding: 10px;
@@ -64,7 +63,7 @@ function closeModal() {
   display: flex;
   justify-content: center; 
   gap: 20px; 
-  padding: 30px 50px;
+  padding: 5px 50px;
   margin-bottom:20px ;
   
 }
@@ -100,5 +99,37 @@ li {
     padding: 10px;
     font-size: 19px;
 }
+.github-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #FFD700;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
+.github-link:hover {
+  background-color:#87CEEB ;
+  color: #333;
+}
+
+/* Vous pouvez également ajouter des styles pour les icônes si vous en utilisez */
+.github-icon {
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
+.modal-image {
+  width:170px; 
+  height: auto;
+  display: block;  
+}
+.close-button {
+  position: fixed; 
+    top: 16px; 
+    right: 16px; 
+    z-index: 1000;
+}
+}
 </style>

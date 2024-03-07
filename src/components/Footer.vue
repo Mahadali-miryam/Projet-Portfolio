@@ -2,10 +2,10 @@
 
 import { ref } from 'vue';
 
-/* 'ref' est utilisé pour créer une variable qui peut changer de valeur.*/
+/* 'ref' pour créer une variable qui peut changer de valeur.*/
 const lastUpdated = ref('');
 
-/* On crée une variable 'lastUpdated' pour garder la date de mise à jour.*/
+/* variable 'lastUpdated' pour garder la date de mise à jour.*/
 lastUpdated.value = `Dernière mise à jour : ${new Date().
 toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}`;
 
@@ -23,9 +23,7 @@ toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}`;
   </a> 
 </div>
 
-<!-- Cette partie montre la date de mise à jour. 
-La variable 'lastUpdated' change automatiquement la date ici. --> 
-
+<!-- La variable 'lastUpdated' change automatiquement la date ici lors de la mise à jour. --> 
 <div id="last-updated">{{ lastUpdated }}</div>
 
 </footer>

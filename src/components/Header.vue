@@ -43,9 +43,9 @@ const closeMenu = () => {
     
     <ul>
     <!--Boucle sur les liens de navigation pour afficher le menu-->
-    <li v-for="(link, index) in links" :key="index"@click="closeMenu">
-    <router-link :to="link.path">{{ link.name }}</router-link>
-    </li>
+      <li v-for="(link, index) in links" :key="index"@click="closeMenu">
+      <router-link :to="link.path">{{ link.name }}</router-link>
+      </li>
     </ul> 
     </div>
 
@@ -103,7 +103,7 @@ header{
 }
 /*Apparence du menu burger lorsqu'il est actif*/
 .active{
-  left: 0%; /*Apparition du menu à gauche*/
+  left: 0%; 
  
 }
 
@@ -111,8 +111,8 @@ header{
 li:hover{
   background-color:#87CEEB;
   cursor: pointer;  
-  transform: scale(1.05); /*indique un élément cliquable */
-  transition: transform 0.3s,background-color 0.3s; /* Anime les changements */
+  transform: scale(1.05); 
+  transition: transform 0.3s,background-color 0.3s; 
   border-radius: 10px;
 }
 .links{

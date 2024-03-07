@@ -2,7 +2,13 @@
 import MyModal from '@/components/MyModal.vue';
 import { ref } from 'vue';
 import imageCV from '@/assets/image-CV.jpg';
+import cv from '@/assets/cv.jpeg';
+import cv1 from '@/assets/cv1.jpg';
+import form from '@/assets/form.png';
+import form2 from '@/assets/form2.jpg';
+import photo from '@/assets/photo.jpg';
 import cahierdescharges from '@/assets/cahierdescharges.jpg';
+import cahierdescharges1 from '@/assets/cahierdescharges1.jpg';
 import formulaire from '@/assets/formulaire.jpg';
 import maquette from '@/assets/maquette.jpg';
 import maquetteintegration from '@/assets/maquetteintegration.jpg';
@@ -10,9 +16,8 @@ const creations = ref([
   {
     title: "Curriculum Vitae",
     image: imageCV,
-    modalImage: maquette,
-    modalImage2: formulaire,
-    description: "Curriculum Vitae Miryam Mahadali.",
+    modalImage: cv,
+    modalImage2: cv1,
     details: [
       { label: "Date de création", value: "novembre 2023" },
       { label: "Technologies utilisées", value: "HTML5, CSS3" },
@@ -23,7 +28,7 @@ const creations = ref([
     title: "Cahier des charges",
     image: cahierdescharges,
     modalImage:cahierdescharges ,
-    description: "Cahier des charges",
+    modalImage2:cahierdescharges1,
     details: [
       { label: "Date de création", value: "Décembre 2023" },
       { label: "Technologies utilisées", value: "word" },
@@ -34,12 +39,12 @@ const creations = ref([
   {
     title: "Formulaire",
     image: formulaire,
-    modalImage:formulaire,
-   
-    description: "Dynamiser un espace formulaire",
+    modalImage:form,
+    modalImage2:form2,
+    
     details: [ 
       { label: "Date de création", value: "Janvier 2024" },
-      { label: "Technologies utilisées", value: "HTML5, CSS et Java-Script" },
+      { label: "Technologies utilisées", value: "HTML5, CSS, et Java-Script" },
     ],
     github: "https://github.com/Mahadali-miryam/devoir-dynamiser-un-espace-commentaire" 
   },
@@ -48,7 +53,7 @@ const creations = ref([
     title: "Maquette MY HOMESPACE",
     image: maquette,
     modalImage:maquetteintegration,
-    description: "Cette maquette est un exercice qui m'a permis d'evoluer avec html5 et css",
+    modalImage2:photo,
     details: [
     { label: "Date de création", value: "Janvier 2024" },
       { label: "Technologies utilisées", value: "HTML5, CSS" },
