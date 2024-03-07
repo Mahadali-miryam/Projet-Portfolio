@@ -52,7 +52,7 @@ const closeMenu = () => {
     <!--Menu principal pour les écrans de bureau(menu desktop)-->
     <ul class="links">
       <li v-for="(link, index) in links" :key="index"> 
-      <router-link :to="link.path router-link">{{ link.name }}</router-link> 
+        <router-link :to="link.path" class="router-link">{{ link.name }}</router-link>
       </li>  
     </ul>
    
