@@ -27,7 +27,7 @@ const closeMenu = () => {
     <!--Logo qui, en clic, redirige vers la page d'accueil grace au router-link-->
     <div class="logo">
       <router-link to="/"> 
-        <img src="@/assets/logo Miryam.png" width="125" height="125" alt="logo Miryam"/>
+        <img src="@/assets/logo Miryam.png" width="125" height="125" alt="logo Miryam">
       </router-link>
     </div>
     
@@ -43,7 +43,7 @@ const closeMenu = () => {
     
     <ul>
     <!--Boucle sur les liens de navigation pour afficher le menu-->
-      <li v-for="(link, index) in links" :key="index"@click="closeMenu">
+      <li v-for="(link, index) in links" :key="index" @click="closeMenu">
       <router-link :to="link.path">{{ link.name }}</router-link>
       </li>
     </ul> 
