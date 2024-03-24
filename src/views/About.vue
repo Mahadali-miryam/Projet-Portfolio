@@ -51,7 +51,7 @@ p {
 .bold-text { 
   font-weight: bold;
   font-family: "Poppins", sans-serif; 
-  font-size: 800;
+  font-size: 1.2rem;
 }
 strong{
   font-style: italic

@@ -23,8 +23,8 @@ function closeModal() {
   <h2>{{props.creation.title }}</h2>
   
   <div class="images-container"> 
-    <img :src="props.creation.modalImage" :alt="props.creation.title" class="modal-image" />
-    <img v-if="props.creation.modalImage2" :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image" />
+    <img :src="props.creation.modalImage" :alt="props.creation.title" class="modal-image">
+    <img v-if="props.creation.modalImage2" :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image">
   </div> 
     <!-- Contenu de la modale -->
   <ul class="infos">
@@ -33,7 +33,8 @@ function closeModal() {
     </li>
   </ul>    
   <a v-if="props.creation.github" :href="props.creation.github" target="_blank" class="github-link">Voir sur GitHub</a>
-  </div>
+  <a v-if="props.creation.pdf" :href="props.creation.pdf" target="_blank" class="pdf-link">Télécharger le pdf</a> 
+</div>
 </div>
 </template>
 
@@ -99,7 +100,8 @@ li {
     padding: 10px;
     font-size: 19px;
 }
-.github-link {
+.github-link,
+.pdf-link {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
@@ -110,7 +112,8 @@ li {
   transition: background-color 0.3s ease;
 }
 
-.github-link:hover {
+.github-link:hover, 
+.pdf-link:hover {
   background-color:#87CEEB ;
   color: #333;
 }

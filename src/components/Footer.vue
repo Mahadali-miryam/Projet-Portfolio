@@ -16,16 +16,17 @@ toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}`;
 <footer>
 <div class="social-icons">
   <a href="https://www.linkedin.com/in/miryam-mahadali-amirali-986223273" target="_blank">
-    <img class="linkedin" src="@/assets/linkedin.png"  alt="logo linkedin"/>
+    <img class="linkedin" src="@/assets/linkedin.png"  alt="logo linkedin">
   </a> 
   <a href="https://github.com/Mahadali-miryam " target="_blank">
-  <img class="github" src="@/assets/github.png" alt="logo github"/>
+  <img class="github" src="@/assets/github.png" alt="logo github">
   </a> 
 </div>
 
 <!-- La variable 'lastUpdated' change automatiquement la date ici lors de la mise à jour. --> 
 <div id="last-updated">{{ lastUpdated }}</div>
 
+       
 </footer>
 
 </template>
