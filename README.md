@@ -1,10 +1,6 @@
 # Projet-Portfolio
 
 This template should help get you started developing with Vue 3 in Vite.
-# Résumé en Français
-# Portfolio de Miryam Mahadali
-
-Ce portfolio en ligne présente mes compétences et projets en tant que développeuse web . Il sert de vitrine pour mon travail et de point de contact pour les clients potentiels et les recruteurs.
 
 ## Recommended IDE Setup
 
@@ -14,9 +10,7 @@ Ce portfolio en ligne présente mes compétences et projets en tant que dévelop
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Prérequis
-Node.js 
-Vue.js 3 
+
 
 ## Project Setup
 
@@ -35,18 +29,4 @@ npm run dev
 ```sh
 npm run build
 ```
-## Technologies utilisées
 
-- Vue.js pour le framework front-end
-- Vue Router pour la navigation
-- EmailJS pour l'intégration des emails
-
-## Validation W3C
-<p>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="CSS Valide !" />
-    </a>
-</p>
-       
