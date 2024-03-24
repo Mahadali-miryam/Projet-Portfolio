@@ -1,7 +1,7 @@
 # Projet-Portfolio
 
 This template should help get you started developing with Vue 3 in Vite.
-## Résumé en Français
+# Résumé en Français
 # Portfolio de Miryam Mahadali
 
 Ce portfolio en ligne présente mes compétences et projets en tant que développeuse web . Il sert de vitrine pour mon travail et de point de contact pour les clients potentiels et les recruteurs.
