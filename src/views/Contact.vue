@@ -1,62 +1,60 @@
 <script setup>
 import { ref } from 'vue';
+import emailjs from 'emailjs-com';
 
+/*références pour les données du formulaire*/
 const firstName = ref('');
 const lastName = ref('');
-const email = ref('');
+const subject = ref('');
 const message = ref('');
 
-const sendContactForm = async () => {
-  const formData = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    email: email.value,
-    message: message.value
-  };
-  
-try {
-  /*Envoi de la requête POST avec les données du formulaire au serveur*/
-  const response = await fetch('http://localhost:5173/home', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-  },
-    body: JSON.stringify(formData)
-  });
-    /* Gestion de la réponse du serveur*/
-  if (response.ok) {
+/*identifiants EmailJS*/
+const SERVICE_ID = 'service_72sumdl';
+const TEMPLATE_ID = 'template_dx8yxvh';
+const USER_ID = 'DBqIFJc9dpmFMgkQB'; 
+
+/*Fonction pour envoyer le formulaire de contact*/
+const sendContactForm = async (formEvent) => {
+  formEvent.preventDefault();
+
+  try {
+    /*Envoie le formulaire avec EmailJS*/
+    const result = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formEvent.target, USER_ID);
+
+    /*Affiche une notification de succès à l'utilisateur*/
     alert('Message envoyé avec succès !');
-  } else {
-    alert('Erreur lors de l\'envoi du message.');
-  }
   } catch (error) {
-    alert('Erreur de réseau.');
+
+    /*Affiche une notification d'erreur à l'utilisateur*/
+    alert('Erreur lors de l\'envoi du message.');
   }
 };
 </script>
 
 <template>
-
 <main>
   <div class="contact-form">
     <h1>Contactez-moi</h1> 
     <p>Vous avez un projet en tête ? Discutons-en ensemble !</p> 
     <form @submit.prevent="sendContactForm">
       <div>
-        <label for="firstName">Prénom:</label>
-        <input type="text" id="firstName" v-model="firstName" required />
-      </div>
-      <div>
         <label for="lastName">Nom:</label>
-        <input type="text" id="lastName" v-model="lastName" required />
+        <input type="text" id="lastName" name="lastName" v-model="lastName" required />
       </div>
+
       <div>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" v-model="email" required/>
+        <label for="firstName">Prénom:</label>
+        <input type="text" id="firstName" name="firstName"  v-model="firstName" required />
       </div>
+      
+      <div>
+        <label for="subject">Objet:</label>
+        <input type="text" id="subject" name="subject" v-model="subject" required />
+      </div>
+      
       <div>
         <label for="message">Message:</label>
-        <textarea id="message" v-model="message" required></textarea>
+        <textarea id="message" name="message" v-model="message" required></textarea>
       </div>
       <button type="submit">Envoyer</button>
     </form>

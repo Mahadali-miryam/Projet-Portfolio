@@ -23,8 +23,10 @@ function closeModal() {
   <h2>{{props.creation.title }}</h2>
   
   <div class="images-container"> 
+
     <img :src="props.creation.modalImage" :alt="props.creation.title" class="modal-image">
     <img v-if="props.creation.modalImage2" :src="props.creation.modalImage2" :alt="props.creation.title" class="modal-image">
+
   </div> 
     <!-- Contenu de la modale -->
   <ul class="infos">
