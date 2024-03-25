@@ -12,6 +12,7 @@ import cahierdescharges1 from '@/assets/cahierdescharges1.jpg';
 import formulaire from '@/assets/formulaire.jpg';
 import maquette from '@/assets/maquette.jpg';
 import maquetteintegration from '@/assets/maquetteintegration.jpg';
+
 const creations = ref([
   {
     title: "Curriculum Vitae",
@@ -33,6 +34,7 @@ const creations = ref([
       { label: "Date de création", value: "Décembre 2023" },
       { label: "Technologies utilisées", value: "word" },
     ],
+    pdf: "https://1drv.ms/b/s!AuY0AhENKkSS3gSSgi21soB2bVNM?e=BVgATT"
     
   },
   
@@ -79,7 +81,7 @@ const modalOpen = ref(false);
     <h1 class="creations-title">Mes créations</h1> 
   <!-- Boucle à travers les créations et affiche chaque création -->
   <div v-for="(creation, index) in creations" :key="index" class="creation">
-    <img :src="creation.image" :alt="creation.title" @click="openModal(creation)" class="creation-image" />
+    <img :src="creation.image" :alt="creation.title" @click="openModal(creation)" class="creation-image" >
       <p>{{ creation.title }}</p>
   </div>
   </div>

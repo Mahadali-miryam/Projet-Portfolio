@@ -26,6 +26,7 @@ toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}`;
 <!-- La variable 'lastUpdated' change automatiquement la date ici lors de la mise à jour. --> 
 <div id="last-updated">{{ lastUpdated }}</div>
 
+       
 </footer>
 
 </template>
