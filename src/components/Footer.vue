@@ -42,16 +42,21 @@ footer {
   text-align: center;
   background-color: #87CEEB;
   padding: 20px; 
+  
+}
+a{
+  margin: 10px;
 }
 .social-icons img:hover {
   opacity: 0.4;
+  
 }
 
     
 #last-updated{
   color: #1C1B55;
   font-family: 'Montserrat', sans-serif; 
-
+  margin-top: 10px;
 }
 
 </style>
