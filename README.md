@@ -38,6 +38,6 @@ npm run build
 ```
 ## Technologies utilisées
 
-Vue.js pour le framework front-end
-Vue Router pour la navigation
-EmailJS pour l'intégration des emails
+- Vue.js pour le framework front-end
+- Vue Router pour la navigation
+- EmailJS pour l'intégration des emails
